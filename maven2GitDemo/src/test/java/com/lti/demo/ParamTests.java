@@ -1,7 +1,7 @@
 package com.lti.demo;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
+//import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.util.Arrays;
 import java.util.List;
 
@@ -54,12 +54,9 @@ class ParamTests {
 				() -> assertEquals(10,numbers.get(4)) 				
 				);	
 	}
-//	@Disabled
-//	@Test
-//	void testExceptions(){
-//		
-//		Assertions.assertThrows(UserApp.class, () ->)
-//		{
-//		Integer.parseInt("One");
-//	}
+	@Test
+	void testExceptions(){
+		
+		Assertions.assertThrows(IllegalArgumentException.class, () ->{Integer.parseInt("One");});
+	}
 }
